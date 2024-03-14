@@ -1,0 +1,17 @@
+package edu.kh.jdbc.model.service;
+
+import java.sql.Connection;
+
+import edu.kh.jdbc.common.JDBCTemplate;
+import edu.kh.jdbc.model.dao.TestDAO;
+import edu.kh.jdbc.model.vo.TestVO;
+
+public class TestService {
+
+	private TestDAO dao = new TestDAO();
+	
+	public void insert(TestVO vo1) throws SQLException {
+		Connection conn = JDBCTemplate.getConnection();
+		int result = dao.insert(conn, vo1);
+	}
+}
