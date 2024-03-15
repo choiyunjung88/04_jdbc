@@ -6,7 +6,7 @@
 	<!-- 마크업 언어 주석 -->
 	<!-- ctrl + shift + / -->
 	
-	<!-- entry : K:V 한 쌍 -->
+	<!-- entry :  K:V 한 쌍 -->
 	<entry key="driver">oracle.jdbc.driver.OracleDriver</entry>
 	
 	<entry key="url">jdbc:oracle:thin:@localhost:1521:XE</entry>
@@ -14,5 +14,5 @@
 	<entry key="user">kh_cyj</entry>
 	
 	<entry key="password">kh1234</entry>
-
+	
 </properties>

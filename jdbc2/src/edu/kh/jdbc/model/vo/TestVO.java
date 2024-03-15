@@ -1,19 +1,23 @@
 package edu.kh.jdbc.model.vo;
 
 public class TestVO {
-
+	
 	private int testNo;
 	private String testTitle;
 	private String testContent;
 	
+	// 기본생성자
 	public TestVO() {}
 
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+	// 매개변수생성자
+	public TestVO(int testNo, String testTitle, String testContent) {
+		super();
+		this.testNo = testNo;
+		this.testTitle = testTitle;
+		this.testContent = testContent;
 	}
 
+	// getter/setter
 	public int getTestNo() {
 		return testNo;
 	}
@@ -38,12 +42,10 @@ public class TestVO {
 		this.testContent = testContent;
 	}
 
-	public TestVO(int testNo, String testTitle, String testContent) {
-		super();
-		this.testNo = testNo;
-		this.testTitle = testTitle;
-		this.testContent = testContent;
+	@Override
+	public String toString() {
+		return "TestVO [testNo=" + testNo + ", testTitle=" + testTitle + ", testContent=" + testContent + "]";
 	}
-	
+
 	
 }
