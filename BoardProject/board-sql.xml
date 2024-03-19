@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>board-sql.xml file!!!</comment>
+<entry key="selectBoard">
+	SELECT BOARD_NO, BOARD_TITLE, BOARD_CONTENT, MEMBER_NO
+	MEMBER_MM, READ_COUNT, CREATE_DT
+	FROM "BOARD"
+	JOIN "MEMBER" USING(MEMBER_NO)
+	WHERE DELETE_FL = 'N'
+	AND BOARD_NO = ?
+</entry>
+</properties>

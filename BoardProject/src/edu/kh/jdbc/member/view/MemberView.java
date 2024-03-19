@@ -12,7 +12,7 @@ import edu.kh.jdbc.member.model.service.MemberService;
 public class MemberView {
 	
 	private static Scanner sc = new Scanner(System.in);
-	private MemberService service = new MemberService();
+	private static MemberService service = new MemberService();
 	//회원기능화면객체생성
 	private MemberView memberview = new MemberView();
 	
@@ -41,8 +41,8 @@ public class MemberView {
 				case 1: selectMyInfo(); break;
 				case 2: selectMemberList(); break;
 				case 3: updateMember(); break;
-				case 4: // updatePassword(); break;
-				case 5: // if(unResisterMenu()) return; break;
+				case 4: updatePassword(); break;
+				case 5: if(unResisterMenu()) return; break;
 				case 9: System.out.println("\n==========메인메뉴로 돌아갑니다==========\n"); break;
 				case 0: System.out.println("\n======프로그램 종료=======\n");
 				
@@ -60,13 +60,66 @@ public class MemberView {
 		}while(input != 9);
 	}
 
+	private static boolean unResisterMenu() {
+		System.out.println("\n==== 회원탈퇴 ====\n");
+		System.out.println("현재 비밀번호 : ");
+		String memberPw = sc.next();
+		
+		String code = service.
+	}
+
+	private static void updatePassword() {
+		System.out.println("\n====비밀번호 변경====\n");
+		
+		System.out.println("현재 비밀번호 : ");
+		String current = sc.next();
+		
+		String newPw1 = null;
+		
+		while(true) {
+			// 새 비밀번호 입력
+			System.out.print("새 비밀번호 : ");
+			newPw1 = sc.next();
+			System.out.print("새 비밀번호 확인 : ");
+			String newPw2 = sc.next();
+			
+			// 같을 때까지 무한 반복
+			if(newPw1.equals(newPw2)) {
+				break;
+			}
+			
+			// 아닐때
+			System.out.println("\n***새 비밀번호가 일치하지 않습니다***\n");
+			
+			
+		}
+		
+		try {
+			// 서비스 호출 (현재 비밀번호,
+			int result = service.update();                                
+		}catch(Exception e) {
+			System.out.println("\n*** 비밀번호 변경 중 예외 발생 ***\n");
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
 	private static void updateMember() {
 		// TODO Auto-generated method stub
 		
 	}
 
 	private static void selectMemberList() {
-		System.out.println("\n====회원 목록 조회====\n
+		System.out.println("\n====회원 목록 조회====\n");
 	}
 
 	/**

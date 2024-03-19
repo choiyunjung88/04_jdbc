@@ -1,7 +1,7 @@
 package edu.kh.jdbc.main.model.dto;
 
 public class Member {
-	private int member.No;
+	private int memberNo;
 	private String memberId;
 	private String memberPw;
 	private String memberName;
@@ -9,15 +9,15 @@ public class Member {
 	private String enrollDate;
 	private String unresgisterFlag;
 
-	public Member()
+	public Member() {
 }
 
 	public int getMember() {
-		return member;
+		return memberNo;
 	}
 
 	public void setMember(int member) {
-		this.member = member;
+		this.memberNo = member;
 	}
 
 	public String getMemberId() {
